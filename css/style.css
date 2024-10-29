@@ -283,6 +283,7 @@ img {
     line-height: 3.33vh;
     text-align: left;
     margin-bottom: 6.66vh;
+    width: 80%;
 }
 
 .main-form {
@@ -569,6 +570,7 @@ img {
     height: 100vh;
     background: rgba(7, 16, 35, 1);
     padding: 41vw 4.44vw 0;
+    z-index: 3;
 }
 
 .menu-list-mob__item {
@@ -589,6 +591,71 @@ img {
 
 .hidden {
     overflow: hidden;
+}
+.scroll-down {
+    position: fixed;
+    bottom: 7vh;
+    z-index: 3;
+    display: none;
+}
+.scroll-down:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 7vh;
+    left: calc(50% - 2vh);
+    width: 4vh;
+    height: 4vh;
+    border: 1vh solid var(--text-color-primary);
+    border-left: none;
+    border-top: none;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-animation: arrowMove 1.2s infinite;
+    animation: arrowMove 1.2s infinite;
+    z-index: 100;
+}
+
+@-webkit-keyframes arrowMove {
+    to {
+        -webkit-transform: rotate(45deg) translateY(2rem) translateX(2rem);
+        transform: rotate(45deg) translateY(2rem) translateX(2rem);
+        opacity: 0;
+    }
+}
+
+@keyframes arrowMove {
+    to {
+        -webkit-transform: rotate(45deg) translateY(2rem) translateX(2rem);
+        transform: rotate(45deg) translateY(2rem) translateX(2rem);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes navArrowMove {
+    to {
+        -webkit-transform: translateX(2rem);
+        transform: translateX(2rem);
+        opacity: 0;
+    }
+}
+@keyframes navArrowMove {
+    to {
+        -webkit-transform: translateX(2rem);
+        transform: translateX(2rem);
+        opacity: 0;
+    }
+}
+
+.header {
+    display: none;
+}
+
+.d-none {
+    display: none!important;
 }
 
 @media only screen and (orientation: landscape) and (max-width: 180vh) {
@@ -757,6 +824,8 @@ img {
 }
 
 @media only screen and (orientation: portrait) {
+    .hidden .scroll-down,
+    .content-left .logo,
     .chip1,
     .chip2,
     .chip3,
@@ -800,10 +869,10 @@ img {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
-        margin-bottom: 8.88vw;
-        padding: 2.77vw 0;
+        margin-bottom: 4vw;
+        padding: 2.77vw 4.4vw;
         position: relative;
-        z-index: 1;
+        z-index: 4;
     }
 
     .logo {
@@ -823,15 +892,16 @@ img {
     }
 
     .content-left__title {
-        font-size: 7.77vw;
-        line-height: 8.33vw;
+        font-size: 6.66vw;
+        line-height: 1;
         margin-bottom: 5.55vw;
     }
 
     .content-left__text {
         font-size: 3.88vw;
         line-height: 5.83vw;
-        margin-bottom: 16.66vw;
+        margin-bottom: 8.55vw;
+        width: 100%;
     }
 
     .main-form {
@@ -886,6 +956,7 @@ img {
         font-size: 2.77vw;
     }
 
+    .scroll-down,
     .hidden .menu-list-mob {
         display: inline-block;
     }

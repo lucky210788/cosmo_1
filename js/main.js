@@ -8,3 +8,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('scroll', function() {
+    const scrollDown = document.querySelector('.scroll-down');
+    const contentRight = document.querySelector('.content-right');
+
+    if (contentRight) {
+        const contentRightPosition = contentRight.getBoundingClientRect();
+        const isVisible = contentRightPosition.top < window.innerHeight && contentRightPosition.bottom > 0;
+
+        if (isVisible) {
+            scrollDown.classList.add('d-none');
+        } else {
+            scrollDown.classList.remove('d-none');
+        }
+    }
+});
