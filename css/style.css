@@ -594,16 +594,17 @@ img {
 }
 .scroll-down {
     position: fixed;
-    bottom: 7vh;
+    bottom: 4vh;
     z-index: 3;
     display: none;
+    right: 10vw;
 }
 .scroll-down:after {
     content: "";
     position: absolute;
     display: block;
     bottom: 7vh;
-    left: calc(50% - 2vh);
+    right: calc(50% - 2vh);
     width: 4vh;
     height: 4vh;
     border: 1vh solid var(--text-color-primary);

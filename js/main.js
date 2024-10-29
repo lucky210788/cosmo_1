@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('scroll', function() {
     const scrollDown = document.querySelector('.scroll-down');
-    const contentRight = document.querySelector('.content-right');
+    const contentRight = document.querySelector('.content-right__title');
 
     if (contentRight) {
         const contentRightPosition = contentRight.getBoundingClientRect();
