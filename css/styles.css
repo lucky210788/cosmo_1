@@ -1,0 +1,443 @@
+:root {
+    --text-color-primary: #fff;
+    --text-color-second: rgba(255, 51, 0, 1);
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../fonts/Montserrat-Medium.eot');
+    src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+    url('../fonts/Montserrat-Medium.woff') format('woff'),
+    url('../fonts/Montserrat-Medium.ttf') format('truetype'),
+    url('../fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/Montserrat-Light.eot');
+    src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Light.woff2') format('woff2'),
+    url('../fonts/Montserrat-Light.woff') format('woff'),
+    url('../fonts/Montserrat-Light.ttf') format('truetype'),
+    url('../fonts/Montserrat-Light.svg#Montserrat-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.eot');
+    src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat-Bold.woff') format('woff'),
+    url('../fonts/Montserrat-Bold.ttf') format('truetype'),
+    url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('../fonts/Montserrat-ExtraBold.eot');
+    src: url('../fonts/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Montserrat-ExtraBold.woff') format('woff'),
+    url('../fonts/Montserrat-ExtraBold.ttf') format('truetype'),
+    url('../fonts/Montserrat-ExtraBold.svg#Montserrat-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('../fonts/Montserrat-Regular.woff') format('woff'),
+    url('../fonts/Montserrat-Regular.ttf') format('truetype'),
+    url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('../fonts/Montserrat-SemiBold.eot');
+    src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+    url('../fonts/Montserrat-SemiBold.ttf') format('truetype'),
+    url('../fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, select,
+figure, figcaption, picture {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+header, footer, section, nav, aside {
+    display: block;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    vertical-align: top;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: var(--text-color-primary);
+    position: relative;
+    background: rgba(9, 34, 76, 1);
+}
+
+body > img {
+    display: none;
+}
+
+a {
+    -webkit-transition: 0.5s all ease-out;
+    -o-transition: 0.5s all ease-out;
+    transition: 0.5s all ease-out;
+    cursor: pointer;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+select, input, textarea {
+    vertical-align: middle;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+:focus {
+    outline: none;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, input, textarea {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    list-style: none;
+    line-height: 1;
+}
+
+section, footer {
+    text-align: center;
+    overflow: hidden;
+}
+
+button,
+button:active,
+button:focus {
+    outline: none;
+    cursor: pointer;
+}
+
+img {
+    height: auto;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.content-page {
+    padding-top: 5.55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.content-page-header {
+    padding: 0 9.25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5.55vh;
+}
+
+.content-page-header__logo {
+    width: 27.77vh;
+}
+
+.navigation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.navigation__item a {
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 1.85vh;
+    line-height: 1;
+    text-align: left;
+    color: var(--text-color-primary);
+}
+
+.navigation__item a:hover {
+    color: var(--text-color-second);
+}
+
+.navigation__item {
+    margin-right: 3.7vh;
+    display: flex;
+}
+
+.navigation__item:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.content-page-footer {
+    margin-top: 9vh;
+    padding: 5.18vh 9.25vh;
+    background: rgba(9, 26, 54, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-slogan-address {
+    display: flex;
+    align-items: center;
+}
+.footer-slogan-address__slogan {
+    font-family: 'Montserrat-ExtraBold', sans-serif;
+    font-size: 2.22vh;
+    line-height: 1;
+    text-align: left;
+    margin-right: 9.25vh;
+    text-transform: uppercase;
+}
+.footer-slogan-address__address {
+    font-family: 'Montserrat-Light', sans-serif;
+    font-size: 1.11vh;
+    line-height: 1;
+    text-align: left;
+    width: 42.59vh;
+}
+.content-page-container{
+    max-width: 1200px;
+    width: 91%;
+    margin: 0 auto;
+}
+.content-page__title{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 4.81vh;
+    line-height: 5.27vh;
+    text-align: center;
+    margin-bottom: 3.7vh;
+}
+.content-page__text{
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 1.85vh;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--text-color-primary);
+}
+.text-bold{
+    font-family: 'Montserrat-Bold', sans-serif;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-mb{
+    margin-bottom: 1.85vh;
+}
+.text-list {
+    padding-left: 2.5vh;
+}
+.text-list li {
+    list-style-type: disc;
+}
+.content-page__subtitle{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 2.96vh;
+    line-height: 2.68vh;
+    text-align: left;
+}
+
+@media only screen and (orientation: landscape) and (max-width: 135vh) {
+    .footer-slogan-address__slogan {
+        font-size: 2vh;
+        margin-right: 4vh;
+    }
+    .navigation__item a {
+        font-size: 1.5vh;
+    }
+    .navigation__item {
+        margin-right: 2.3vh;
+    }
+    .footer-slogan-address__address {
+        width: 34.6vh;
+    }
+    .content-page-header {
+        padding: 0 6.25vh;
+        margin-bottom: 4vh;
+    }
+    .content-page-footer {
+        padding: 5.18vh 6.25vh;
+    }
+    .content-page {
+        padding-top: 4vh;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 560px) {
+    .footer-slogan-address__address {
+        width: 33.5vh;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    .content-page {
+        padding-top: 2.77vw;
+    }
+    .content-page-header {
+        padding: 0 4.44vw;
+        margin-bottom: 13.3vw;
+    }
+
+    .content-page-container{
+        width: 100%;
+        padding: 0 4.44vw;
+    }
+    .content-page__title {
+        font-size: 6.66vw;
+        line-height: 1.1;
+        margin-bottom: 8.88vw;
+        text-align: left;
+    }
+    .content-page__text {
+        font-size: 3.88vw;
+    }
+    .text-mb{
+        margin-bottom: 3.88vw;
+    }
+    .content-page-footer {
+        margin-top: 18vw;
+        padding: 4.44vw 8.88vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-slogan-address {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .footer-slogan-address__address {
+        font-size: 2.77vw;
+        width: 100%;
+    }
+    .footer-slogan-address__slogan {
+        font-size: 5.55vw;
+        line-height: 1;
+        margin: 0 0 8.88vw;
+    }
+    .navigation{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 6.66vw;
+    }
+    .navigation__item {
+        margin: 0;
+    }
+    .navigation__item a {
+        font-size: 4.44vw;
+        line-height: 8.88vw;
+    }
+    .content-page-header {
+        z-index: 4;
+    }
+    .content-page-header .navigation {
+        display: none;
+    }
+    .content-page-header__logo {
+        width: 35vw;
+    }
+}

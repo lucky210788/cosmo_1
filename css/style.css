@@ -585,6 +585,10 @@ img {
     color: var(--text-color-primary);
 }
 
+.active a {
+    color: var(--text-color-second)!important;
+}
+
 .menu-mob-link:hover {
     color: var(--text-color-second);
 }
