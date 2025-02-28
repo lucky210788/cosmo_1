@@ -4,6 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const isPortrait = window.matchMedia("(orientation: portrait)").matches;
 
+    const getFinalUrl = (btn) => {
+        const baseUrl = btn.getAttribute('href');
+        const params = new URLSearchParams({
+            offer_id: "1135",
+            partner_id: "20098",
+            landing_id: "4494",
+            utm_medium: "affiliate"
+        });
+
+        btn.setAttribute("href", `${baseUrl}?${params.toString()}`);
+    };
+
+    getFinalUrl(button);
+
     if (isTouchDevice && isPortrait) {
         if (button) {
             button.addEventListener("click", (event) => {
