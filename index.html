@@ -1,34 +1,169 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>VIPKING!</title>
+    <title>LUXGAMING</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body class="">
-<main class="main">
-    <img src="images/coin1.png" alt="coin" class="coin1 coin-desc">
-    <img src="images/coin2.png" alt="coin" class="coin2 coin-desc">
-    <img src="images/coin3.png" alt="coin" class="coin3 coin-desc">
-    <img src="images/coin4.png" alt="coin" class="coin4 coin-desc">
-    <img src="images/coin5.png" alt="coin" class="coin5 coin-desc">
-    <img src="images/coin1-mob.png" alt="coin" class="coin1-mob coin-mob">
-    <img src="images/coin2-mob.png" alt="coin" class="coin2-mob coin-mob">
-    <img src="images/coin3-mob.png" alt="coin" class="coin3-mob coin-mob">
-    <img src="images/coin4-mob.png" alt="coin" class="coin4-mob coin-mob">
+<section class="welcome-section" id="welcomeSection">
     <header class="header">
-        <a href="" class="logo">
-            <img src="images/logo.svg" alt="VIPKING!" class="logo__img">
-        </a>
+        <div class="container">
+            <a href="#welcomeSection" class="logo for-scroll">
+                <img src="images/logo.svg" alt="LUXGAMING!" class="logo__img">
+            </a>
+            <naw class="nav-desc mob-hide">
+                <ul class="menu-desc">
+                    <li class="menu-desc__item">
+                        <a href="#aboutUs" class="menu-link for-scroll">About Us</a>
+                    </li>
+                    <li class="menu-desc__item">
+                        <a href="#ourServices" class="menu-link for-scroll">Our Services</a>
+                    </li>
+                    <li class="menu-desc__item">
+                        <a href="#whyChooseUs" class="menu-link for-scroll">Why Choose Us</a>
+                    </li>
+                    <li class="menu-desc__item">
+                        <a href="#contactUs" class="menu-link for-scroll">Contact Us</a>
+                    </li>
+                </ul>
+            </naw>
+            <div class="menu-btn desc-hide">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </header>
+    <ul class="menu-mob">
+        <li class="menu-mob__item">
+            <a href="#aboutUs" class="menu-link for-scroll">About Us</a>
+        </li>
+        <li class="menu-mob__item">
+            <a href="#ourServices" class="menu-link for-scroll">Our Services</a>
+        </li>
+        <li class="menu-mob__item">
+            <a href="#whyChooseUs" class="menu-link for-scroll">Why Choose Us</a>
+        </li>
+        <li class="menu-mob__item">
+            <a href="#contactUs" class="menu-link for-scroll">Contact Us</a>
+        </li>
+    </ul>
     <div class="container">
-        <p class="bonus">200%</p>
-        <p class="title">welcome<br/>bonus</p>
-        <a href="https://vip-king.com/authProcess/registration" class="main-btn">get bonus</a>
+        <div class="welcome-content">
+            <p class="welcome-content__title font-mob-big">We Create<br/> Mobile Games<br/> That Players Love</p>
+            <p class="welcome-content__subtitle font-mob-small">Immersive experiences. Addictive gameplay. Limitless fun.</p>
+            <a href="/" class="welcome-content__btn font-mob-small">Let’s Talk</a>
+        </div>
     </div>
-</main>
+    <img src="images/welcome-section-bg.png" alt="" class="welcome-section__bg mob-hide">
+</section>
+<section id="aboutUs" class="section-who-we-are">
+    <picture>
+        <source media="(orientation: portrait)" srcset="images/who-we-are-title-mob.png">
+        <img src="images/who-we-are-title.png" alt="" class="section-title">
+    </picture>
+    <div class="container">
+        <div class="who-we-are-content">
+            <ul class="main-list">
+                <li class="main-list__item">
+                    <p class="big-text font-mob-big">10+<br/> Games<br/> Published</p>
+                </li>
+                <li class="main-list__item">
+                    <p class="big-text font-mob-big">15+<br/> millions<br/> Downloads</p>
+                </li>
+                <li class="main-list__item">
+                    <p class="big-text font-mob-big">Avg<br/> 4.7<br/> Rating</p>
+                </li>
+            </ul>
+            <p class="who-we-are-content__text font-mob-small">We are a passionate team of developers, artists, and designers dedicated
+                to crafting unforgettable mobile gaming experiences. From casual puzzle games to competitive multiplayer
+                titles, we bring ideas to life and deliver entertainment to millions of players worldwide.</p>
+        </div>
+        <div class="who-we-are-stars">
+            <img src="images/star.png" alt="" class="star">
+            <img src="images/star.png" alt="" class="star">
+            <img src="images/star.png" alt="" class="star">
+            <img src="images/star.png" alt="" class="star">
+            <img src="images/star1.png" alt="" class="star">
+        </div>
+    </div>
+</section>
+<section id="ourServices" class="section-our-services">
+    <div class="marquee-container marquee-container__top mob-hide" data-text="LUXGAMING"></div>
+    <img src="images/section-our-services-bg.png" alt="" class="section-our-services__bg mob-hide">
+    <div class="container">
+        <div class="section-our-services__title font-mob-big">Our Services</div>
+        <div class="services">
+            <div class="service">
+                <p class="service__title">We offer full-cycle mobile game development:</p>
+                <ul class="service-list">
+                    <li class="service__text service__text__yellow font-mob-small">Concept & Prototyping</li>
+                    <li class="service__text service__text__yellow font-mob-small">Art, Animation, and Sound</li>
+                    <li class="service__text service__text__yellow font-mob-small">LiveOps & Monetization Strategy</li>
+                    <li class="service__text service__text__yellow font-mob-small">Game Design & Balancing</li>
+                    <li class="service__text service__text__yellow font-mob-small">Development (Unity, Unreal, custom engines)</li>
+                    <li class="service__text service__text__yellow font-mob-small">Publishing & ASO</li>
+                </ul>
+            </div>
+            <div class="service service__last">
+                <p class="service__title">Game Art</p>
+                <p class="service__text font-mob-small">Each game is brought to life with premium 2D/3D visuals, smooth animations, and
+                    intuitive UI/UX that keeps players coming back for more.</p>
+            </div>
+        </div>
+    </div>
+    <div class="marquee-container marquee-container__bottom mob-hide" data-text="LUXGAMING"></div>
+</section>
+<section id="whyChooseUs" class="section-why-choose-us">
+    <img src="images/why-choose-us-title.png" alt="" class="section-title">
+    <div class="container">
+        <ul class="main-list">
+            <li class="main-list__item">
+                <p class="big-text font-mob-big">Player-Centric Design</p>
+                <p class="small-text font-mob-small">Every feature is built with the<br/> player in mind</p>
+            </li>
+            <li class="main-list__item font-mob-big">
+                <p class="big-text font-mob-big">Tech-<br/>Driven Approach</p>
+                <p class="small-text font-mob-small">We use the latest tools and<br/> frameworks</p>
+            </li>
+            <li class="main-list__item font-mob-big">
+                <p class="big-text font-mob-big">Global<br/> Reach</p>
+                <p class="small-text font-mob-small">Our games are localized and<br/> scaled for worldwide audiences</p>
+            </li>
+            <li class="main-list__item font-mob-big">
+                <p class="big-text font-mob-big">Proven Results</p>
+                <p class="small-text font-mob-small">Millions of downloads and<br/> strong monetization metrics</p>
+            </li>
+        </ul>
+        <div class="robot-block">
+            <picture>
+                <source media="(orientation: portrait)" srcset="images/robot-mob.png">
+                <img src="images/robot.png" alt="" class="robot-block__robot">
+            </picture>
+
+            <div class="review">
+                <img src="images/triangle.png" alt="" class="review__triangle">
+                <p class="review__text">“Working with LUXGAMING was a game-changer. They delivered exactly what we
+                    needed and more.”</p>
+                <p class="review__text review__author">Partner Studio</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="contactUs" class="footer">
+    <div class="container">
+        <div class="contact-us">
+            <p class="contact-us__title font-mob-big">contact us:</p>
+            <div class="email-block">
+                <p class="email-block__text font-mob-small">Ready to build something incredible? Let’s connect.</p>
+                <a href="mailto:contact@luxgaming.io" class="email-block__link font-mob-small">contact@luxgaming.io</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="js/main.js"></script>
 

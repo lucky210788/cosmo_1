@@ -1,56 +1,85 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const button = document.querySelector(".main-btn");
-    const body = document.body;
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
 
-    const getFinalUrl = (btn) => {
-        const baseUrl = btn.getAttribute('href');
-        const params = new URLSearchParams({
-            offer_id: "1135",
-            partner_id: "20098",
-            landing_id: "4494",
-            utm_medium: "affiliate"
+    const menuBtn = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu-mob');
+    let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', function(){
+            toggleMenu();
+        })
+
+    function toggleMenu() {
+        menuBtn.classList.toggle('active');
+        menu.classList.toggle('active');
+        isMenuOpen = !isMenuOpen;
+    }
+
+    document.querySelectorAll(".for-scroll").forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (isMenuOpen) {
+                toggleMenu();
+            }
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
         });
+    });
 
-        btn.setAttribute("href", `${baseUrl}?${params.toString()}`);
-    };
+});
 
-    getFinalUrl(button);
+function createMarquee(text, container, speed = 100, repeatCount = 20) {
+    container.innerHTML = '';
 
-    if (isTouchDevice && isPortrait) {
-        if (button) {
-            button.addEventListener("click", (event) => {
-                event.preventDefault();
+    const track = document.createElement('div');
+    track.className = 'marquee-track';
 
-                body.classList.add("hover-mob");
+    const words = text.split(' ');
 
-                setTimeout(() => {
-                    window.location.href = button.getAttribute("href");
-                }, 700);
-            });
-        }
-    } else if (isTouchDevice) {
-        if (button) {
-            button.addEventListener("click", (event) => {
-                event.preventDefault();
-
-                body.classList.add("hover");
-
-                setTimeout(() => {
-                    window.location.href = button.getAttribute("href");
-                }, 700);
-            });
-        }
-    } else {
-        if (button) {
-            button.addEventListener("mouseenter", () => {
-                body.classList.add("hover");
-            });
-
-            button.addEventListener("mouseleave", () => {
-                body.classList.remove("hover");
-            });
+    for (let i = 0; i < repeatCount; i++) {
+        for (let word of words) {
+            const span = document.createElement('span');
+            span.className = 'marquee-word';
+            span.textContent = word;
+            track.appendChild(span);
         }
     }
+
+    container.appendChild(track);
+
+    requestAnimationFrame(() => {
+        const totalWidth = track.scrollWidth;
+
+        track.animate([
+            { transform: 'translateX(0)' },
+            { transform: `translateX(-${totalWidth / 2}px)` }
+        ], {
+            duration: totalWidth * speed / 50,
+            iterations: Infinity,
+            easing: 'linear'
+        });
+    });
+}
+
+
+document.querySelectorAll('.marquee-container').forEach(container => {
+    const text = container.getAttribute('data-text');
+    createMarquee(text, container);
 });
+
+window.addEventListener('resize', function(event){
+    document.querySelectorAll('.marquee-container').forEach(container => {
+        const text = container.getAttribute('data-text');
+        createMarquee(text, container);
+    });
+});
+
+
